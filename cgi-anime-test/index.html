@@ -1,17 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Because It Was Beautiful — CGI Test</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="stage">
-    <div id="caption">A WORLD OF QUIET BEAUTY</div>
-    <div id="loading">Creating the world...</div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A cinematic anime-inspired mountain landscape prototype for Because It Was Beautiful."
+    />
+    <meta name="theme-color" content="#83b9bd" />
+    <title>Because It Was Beautiful — Opening Landscape</title>
+    <link rel="stylesheet" href="./style.css" />
 
-  <script type="module" src="main.js"></script>
-</body>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <main class="film">
+      <canvas
+        id="scene"
+        aria-label="A cinematic mountain meadow, countryside house, and layered distant mountains"
+      ></canvas>
+
+      <div class="film__grade" aria-hidden="true"></div>
+
+      <header class="film-title">
+        <p class="film-title__eyebrow">A short film</p>
+        <h1>Because It Was Beautiful</h1>
+      </header>
+
+      <button class="replay" id="replay" type="button" aria-label="Replay the opening camera move">
+        <span class="replay__icon" aria-hidden="true">↻</span>
+        <span>Replay opening</span>
+      </button>
+
+      <p class="status" id="status" role="status" aria-live="polite">
+        Preparing the landscape…
+      </p>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
